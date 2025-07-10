@@ -1,0 +1,32 @@
+/* Formata a lista de resultados, aplicando um efeito, bordas arredondadas e habilitando a rolagem vertical. */
+.results-list {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 1rem;
+  max-height: 1000px;
+  overflow-y: auto;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Define a largura da barra de rolagem para navegadores WebKit. */
+.results-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Estiliza a trilha da barra de rolagem, deixando-a transparente. */
+.results-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Formata o indicador da barra de rolagem, definindo sua cor e deixando-a com cantos arredondados. */
+.results-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}

@@ -1,0 +1,103 @@
+/* Estiliza o contêiner principal do rodapé, definindo cor de fundo, cor do texto e espaçamentos. */
+.site-footer {
+  background-color: #2c2a4a;
+  color: #cbbde2;
+  font-size: 0.9rem;
+  margin-top: 2rem; 
+  padding: 2rem 0; 
+}
+
+/* Define a largura máxima do conteúdo do rodapé e o centraliza na página. */
+.footer-container {
+  max-width: 1000px; 
+  margin: 0 auto;    
+  padding: 0 1rem; 
+}
+
+/* Organiza as colunas do rodapé em um layout flexível que se adapta a telas menores. */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem; 
+}
+
+/* Define o estilo para cada coluna individual do rodapé, permitindo que cresçam igualmente e tenham uma largura mínima. */
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Formata o título de cada coluna do rodapé. */
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem; 
+}
+
+/* Remove a estilização padrão de listas (marcadores e espaçamento) nos links do rodapé. */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Adiciona um espaçamento inferior a cada item da lista de links. */
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Define a aparência padrão dos links nas colunas, incluindo cor e efeito de transição. */
+.footer-column a {
+  color: #cbbde2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Muda a cor do link quando o mouse passa por cima, fornecendo feedback visual. */
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+/* Estiliza o contêiner dos ícones de redes sociais, alinhando-os horizontalmente com um espaçamento. */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Ajusta o tamanho da fonte para os ícones de redes sociais. */
+.social-icons a {
+  font-size: 1.5rem;
+}
+
+/* Formata a seção inferior do rodapé e centraliza seu conteúdo. */
+.footer-base {
+  text-align: center;
+  padding-top: 1.5rem; 
+}
+
+/* Estiliza a linha horizontal usada como separador na base do rodapé. */
+.footer-base hr {
+  border: 0;
+  border-top: 1px solid #4a477a;
+  margin-bottom: 3rem; 
+}
+
+/* Define a margem para o parágrafo de texto na base do rodapé. */
+.footer-base p {
+  margin: 0 0 1rem 0;
+}
+
+/* Formata os links da seção de avisos legais na base do rodapé. */
+.footer-legal-links a {
+  color: #cbbde2;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+/* Estiliza os separadores entre os links de avisos legais. */
+.footer-legal-links span {
+  color: #4a477a;
+}

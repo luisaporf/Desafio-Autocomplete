@@ -1,0 +1,141 @@
+/* Cabeçalho fixo: layout, fundo em degradê, borda inferior e posicionamento */
+.justice-header {
+  padding: 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, #f7f2ff, #ffffff);
+  border-bottom: 1px solid #ddd0f3;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Alinha o texto dos itens da lista de sugestões à esquerda */
+.suggestion-item {
+  text-align: left;
+}
+
+/* Bloco do logo: tamanho fixo, margem abaixo e animação de balanço */
+.justice-logo-block {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 0.75rem;
+  color: #5a2d82;
+  animation: sway 6s ease-in-out infinite;
+}
+
+/* SVG do logo preenche o contêiner e usa a cor atual do elemento pai */
+.justice-scale-svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+}
+
+/* Animação suave de balanço (vai e vem rotacionando levemente) */
+@keyframes sway {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+
+/* Container centralizado para conteúdo do cabeçalho, largura máxima */
+.justice-center-content {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Título principal da página: tamanho grande, negrito e cor escura */
+.justice-title {
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: #3e2a68;
+}
+
+/* Slogan: fonte menor, cor mais clara e margem inferior */
+.justice-slogan {
+  font-size: 1rem;
+  color: #7d6aa7;
+  margin-bottom: 2rem;
+}
+
+/* Wrapper da busca para controlar posicionamento relativo dos filhos */
+.justice-search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Container relativo para o input e o ícone dentro da busca */
+.justice-search {
+  position: relative;
+  width: 100%;
+}
+
+/* Input da busca: arredondado, borda, sombra suave e padding para o ícone */
+.search-input {
+  width: 100%;
+  padding: 0.8rem 2.5rem 0.8rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #c7b4e3;
+  background-color: white;
+  font-size: 1rem;
+  color: #3e2a68;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(122, 87, 209, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Sombra mais destacada quando o campo está focado */
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(122, 87, 209, 0.25);
+}
+
+/* Ícone de lupa posicionado à direita dentro da barra de busca */
+.search-icon {
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5a2d82;
+  font-size: 1.2rem;
+}
+
+/* Dropdown de sugestões: posicionado abaixo do input, com borda e sombra */
+.suggestions-dropdown {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #d6cdea;
+  border-top: none;
+  box-shadow: 0 4px 12px rgba(90, 45, 130, 0.12);
+  max-height: 415px;
+  overflow-y: auto;
+  z-index: 999;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Cada item de sugestão: espaçamento, cursor e transição suave */
+.suggestion-item {
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #3e2a68;
+}
+
+/* Texto em negrito para o trecho que corresponde à busca */
+.suggestion-item strong {
+  font-weight: bold;
+}
+
+/* Destaque do item ativo (selecionado via teclado ou mouse) */
+.suggestion-item.active {
+  background-color: #bfcfff;
+}
+
+/* Cor de fundo muda ao passar o mouse sobre o item */
+.suggestion-item:hover {
+  background-color: #d2ddff;
+}

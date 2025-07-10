@@ -1,0 +1,110 @@
+/* Estiliza o layout principal da aplicação, definindo um fundo animado em degradê e organizando o conteúdo em coluna. */
+.app-layout {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(-45deg, #e3f1ff,  #cddeff, #b2ceff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Define a animação do degradê do fundo, movendo a posição do background para criar um efeito suave e contínuo. */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Estiliza o bloco principal que agrupa o texto de boas-vindas e a barra de busca, centralizando-os na tela. */
+.main-search-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+/* Formata o contêiner do texto de boas-vindas, incluindo alinhamento, cor e animação de entrada. */
+.welcome-text {
+  text-align: center;
+  color: black;
+  animation: fadeIn 1s ease-in;
+  margin-bottom: 3vh;
+  padding: 0 2rem;
+}
+
+/* Estiliza o título principal (h1), definindo tamanho da fonte, peso, sombra e espaçamento. */
+.welcome-text h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+  line-height: 1.2;
+}
+
+/* Estiliza o parágrafo de boas-vindas (p), ajustando fonte, opacidade, sombra e largura máxima. */
+.welcome-text p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  opacity: 0.95;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Formata o contêiner da barra de busca, aplicando um efeito de vidro fosco (glassmorphism) com fundo semitransparente, bordas arredondadas e sombra. */
+.search-bar-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(177, 31, 160, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  animation: fadeIn 1s ease-in;
+}
+
+/* Estiliza a lista de resultados da busca, mantendo o efeito de vidro fosco e controlando a rolagem vertical do conteúdo. */
+.results-list {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 0.5rem;
+  overflow-y: auto;
+
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+/* Define a animação de "fade-in", que faz os elementos aparecerem suavemente, transitando da opacidade 0 para 1 e com um leve movimento vertical. */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Remove os efeitos visuais padrão (borda e sombra) que o navegador aplica aos campos de input quando estão em foco, para um estilo mais limpo. */
+input:focus {
+  outline: none;
+  box-shadow: none;
+}

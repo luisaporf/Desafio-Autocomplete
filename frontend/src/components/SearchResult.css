@@ -1,0 +1,13 @@
+/* Define o espaçamento interno para cada item de resultado da busca. */
+.search-result{
+    padding: 10px 20px;
+}
+
+/* Altera a cor de fundo de um resultado quando o mouse passa por cima. */
+.search-result:hover{
+    background-color: aliceblue;
+}
+.search-result strong {
+    font-weight: bold;
+    text-decoration: underline;
+}

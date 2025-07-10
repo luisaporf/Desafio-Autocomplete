@@ -1,0 +1,12 @@
+{
+  "name": "seeder",
+  "version": "1.0.0",
+  "description": "Script para popular o banco de dados a partir de um arquivo JSON local.",
+  "main": "seed.js",
+  "scripts": {
+    "start": "node seed.js"
+  },
+  "dependencies": {
+    "pg": "^8.12.0"
+  }
+}

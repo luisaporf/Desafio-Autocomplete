@@ -1,0 +1,15 @@
+/* Importa a fonte 'Poppins' do Google Fonts para ser usada em toda a página. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reseta os estilos padrão do navegador, removendo todas as margens e paddings e ajustando o modelo de caixa. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define estilos base para o corpo da página, como a fonte padrão, a cor de fundo e a cor do texto. */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eef1f5; 
+}
