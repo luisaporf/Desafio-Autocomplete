@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-  # Serviço de Banco de Dados (PostgreSQL)
   db:
     image: postgres:14-alpine
     container_name: desafio_db
@@ -14,8 +13,12 @@ services:
       - "${DB_PORT}:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-  # Serviço para popular o banco com dados iniciais
   seeder:
     build: ./data
     container_name: desafio_seeder
@@ -24,9 +27,9 @@ services:
     environment:
       DB_HOST: db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
-  # Serviço da API de Backend
   backend:
     build: ./backend
     container_name: desafio_backend
@@ -35,9 +38,9 @@ services:
     environment:
       DB_HOST: db
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
-  # Serviço da API GraphQL
   graphql:
     build: ./graphql
     container_name: desafio_graphql
@@ -46,7 +49,6 @@ services:
     depends_on:
       - backend
 
-  # Serviço do Frontend (React/Vite)
   frontend:
     build: ./frontend
     container_name: desafio_frontend
