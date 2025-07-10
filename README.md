@@ -1,5 +1,14 @@
 # DESAFIO AUTOCOMPLETE
 
+<div style="text-align: center;">
+  <img src="tela_celular.png" alt="Tela do sistema de autocomplete" width="200" />
+</div>
+
+<div style="text-align: center;">
+  <img src="tela_computador.png" alt="Tela do sistema de autocomplete" width="800" />
+</div>
+
+
 ## Visão Geral do Projeto
 
 Este projeto foi criado para um desafio técnico, com o objetivo de implementar um sistema de autocompletar para buscas. No front-end, usei React para construir a interface e o Apollo Client para conectar com uma API GraphQL, feita com Apollo Server e Node.js no back-end.

@@ -1,4 +1,13 @@
-# COMMENTS.md
+# DESAFIO AUTOCOMPLETE
+
+<div style="text-align: center;">
+  <img src="tela_celular.png" alt="Tela do sistema de autocomplete" width="200" />
+</div>
+
+<div style="text-align: center;">
+  <img src="tela_computador.png" alt="Tela do sistema de autocomplete" width="800" />
+</div>
+
 
 ## Visão Geral do Projeto
 
